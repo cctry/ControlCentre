@@ -10,3 +10,8 @@
   语音识别
 ## VocalSchedule
   语音日程表
+
+ #Necessary libraries
+ 1. urllib
+ 2. urllib2
+ 3. base64
