@@ -18,3 +18,16 @@ class Event(object):
     
     def setValidity(self, bool):
         self.__validity = bool
+
+
+class OperationEvent(Event):
+
+    def __init__(self, args):
+        Event.__init__(self)
+        self.object = args[0]
+        self.intention = args[1]
+
+class InquiryEvent(Event):
+
+    def __init__(self,args):
+        Event.__init__(self)
