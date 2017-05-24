@@ -1,4 +1,4 @@
-import Response
+from Response import *
 class ResponseFactory(object):
 
     def __init__(self, queue):
@@ -15,6 +15,5 @@ class ResponseFactory(object):
             for k, v in dict.items(): 
                 self.__response.addMsg(k, v)
     
-    def getResponse(self, handler):
-        self.__response.setHandler(handler)
+    def getResponse(self):
         self.__queue.put(self.__response)

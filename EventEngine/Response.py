@@ -18,9 +18,6 @@ class Response(object):
     def setValidity(self, bool):
         self.__validity = bool
 
-    def setHandler(self, handler):
-        self.__handler = handler
-
     def addMsg(self, key, value):
         self.__msg.update({key: value})
     
