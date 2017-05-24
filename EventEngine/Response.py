@@ -21,10 +21,10 @@ class Response(object):
     def setHandler(self, handler):
         self.__handler = handler
 
-    def addMsg(key, value):
+    def addMsg(self, key, value):
         self.__msg.update({key: value})
     
-    def getMsg(key):
+    def getMsg(self, key):
         temp = self.__msg.get(key)
         if temp == None:
             # exception

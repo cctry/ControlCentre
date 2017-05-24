@@ -1,15 +1,20 @@
 import Response
 class ResponseFactory(object):
-    def prepareResponse():
+
+    def __init__(self, queue):
+        self.__queue = queue
+
+    def prepareResponse(self, queue):
         response = Response()
         self.__response = response
     
-    def addMsg(key = None, value = None, dict = None, dictBool = False):
+    def addMsg(self, key = None, value = None, dict = None, dictBool = False):
         if !dictBool:
             self.__response.addMsg(key, value)
         else:
             for k, v in dict.items(): 
                 self.__response.addMsg(k, v)
     
-    def getResponse(handler):
+    def getResponse(self, handler):
         self.__response.setHandler(handler)
+        self.__queue.put(self.__response)
