@@ -16,3 +16,6 @@ class Response(object):
     
     def setValidity(self, bool):
         self.__validity = bool
+
+    def setHandler(self, handler):
+        self.__handler = handler
