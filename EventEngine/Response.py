@@ -4,6 +4,7 @@ class Response(object):
         self.__id = hash(str(time.time()))
         self.__timestamp = time.time()
         self.__validity = True
+        self.__msg = {}
         
     def getId(self):
         return self.__id
@@ -19,3 +20,14 @@ class Response(object):
 
     def setHandler(self, handler):
         self.__handler = handler
+
+    def addMsg(key, value):
+        self.__msg.update({key: value})
+    
+    def getMsg(key):
+        temp = self.__msg.get(key)
+        if temp == None:
+            # exception
+            return -1
+        else:
+            return temp
