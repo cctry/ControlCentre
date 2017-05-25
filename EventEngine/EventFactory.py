@@ -1,17 +1,14 @@
 from Event import *
 class EventFactory(object):#TODO
-    TYPE_OPERATION = 1
-    TYPE_INQUIRY = 2
     
     def __init__(self, queue):
         self.__queue = queue
 
-    def prepareEvent(self, queue):
-        event = Event()
-        self.__event = event
+    def prepareEvent(self):
+        self.__event = Event()
     
-    def addMsg(self, key = None, value = None, dict = None, dictBool = False):
-        if !dictBool:
+    def addMsg(self, key = None, value = None, dict = None):
+        if dict is None:
             self.__event.addMsg(key, value)
         else:
             for k, v in dict.items(): 
@@ -19,3 +16,4 @@ class EventFactory(object):#TODO
     
     def getEvent(self):
         self.__queue.put(self.__event)
+
