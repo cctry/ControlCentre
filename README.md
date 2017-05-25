@@ -11,6 +11,8 @@
 ## VocalSchedule
   语音日程表
 
- #Necessary libraries
+ # Necessary libraries
  1. urllib
  2. urllib2
+ 3. apscheduler
+
