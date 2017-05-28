@@ -1,3 +1,4 @@
+import time
 class Response(object):
     
     def __init__(self):
@@ -15,8 +16,8 @@ class Response(object):
     def isValid(self):
         return self.__validity
     
-    def setValidity(self, bool):
-        self.__validity = bool
+    def setValidity(self, Bool):
+        self.__validity = Bool
 
     def addMsg(self, key, value):
         self.__msg.update({key: value})

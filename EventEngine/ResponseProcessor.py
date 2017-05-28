@@ -1,5 +1,5 @@
 import Response
-import threading
+from threading import Thread
 class ResponseProcessor(object):
 
     def __init__(self, queue):
@@ -17,7 +17,7 @@ class ResponseProcessor(object):
         # Run the processor
         while self.__active == True:
             # Fetch response from the queue
-            self.responseQueue.get()# Block if the queue is empty
-            
+            response = self.responseQueue.get()# Block if the queue is empty
+
 
     

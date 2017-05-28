@@ -1,5 +1,5 @@
 from Event import *
-class EventFactory(object):#TODO
+class EventFactory(object):
     
     def __init__(self, queue):
         self.__queue = queue
@@ -7,8 +7,8 @@ class EventFactory(object):#TODO
     def prepareEvent(self):
         self.__event = Event()
     
-    def addMsg(self, key = None, value = None, dict = None):
-        if dict is None:
+    def addMsg(self, key = None, value = None, Dict = None):
+        if Dict is None:
             self.__event.addMsg(key, value)
         else:
             for k, v in dict.items(): 

@@ -1,7 +1,6 @@
 import os
 import OAuth
 import urllib2
-import urllib
 import json
 import base64
 
@@ -15,7 +14,7 @@ def recognize(filePath, format, rate):
     #len
     #speech:encode with base64
     url = 'http://vop.baidu.com/server_api'
-    audioFile = open(filePath,'rb')
+    audioFile = open(filePath, 'rb')
     audio = audioFile.read()
     audioLen = int(os.path.getsize(filePath))
     speech = base64.b64encode(audio) 
