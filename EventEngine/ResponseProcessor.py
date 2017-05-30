@@ -18,6 +18,6 @@ class ResponseProcessor(object):
         while self.__active == True:
             # Fetch response from the queue
             response = self.responseQueue.get()# Block if the queue is empty
-
-
+            handler = response.getHandler()
+            handler()# call the handler
     

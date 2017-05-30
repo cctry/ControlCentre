@@ -13,9 +13,11 @@ class EventEngine(object):
         self.__responseFactory = ResponseFactory(self.__responseQueue)
         self.__responseProcessor = ResponseProcessor(self.__responseQueue)
         self.__eventProcessor = EventProcessor(self.__eventQueue)
-        self.__responseProcessor.Start()
+        self.__responseProcessor.Start(self.__eventCallback)
         self.__eventProcessor.Start()
 
+    def __eventCallback(self, handler):
+        self.__self.__responseFactory.getResponse(handler)# put response into response queue
     
     def setData(self, data):
         self.__eventFactory.prepareEvent()
