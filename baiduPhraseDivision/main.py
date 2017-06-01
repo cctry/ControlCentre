@@ -101,7 +101,7 @@ res = {
 	"domain" : "query"
 	"object" : "天气"
 	"content" : {
-		"startTime" : "1:00:00"
+		"parameter" : "1:00:00"
 	}
 }
 

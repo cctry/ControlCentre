@@ -21,10 +21,9 @@ class EventEngine(object):
     
     def setData(self, data):
         self.__eventFactory.prepareEvent()
+        self.__eventFactory.addMsg(key = 'domain', value = data['domain'])
         self.__eventFactory.addMsg(key = 'object', value = data['object'])
-        self.__eventFactory.addMsg(key = 'intent', value = data['intent'])
-        if data['extra'] != None:
-            self.__eventFactory.addMsg(Dict = data['extra'])
+        self.__eventFactory.addMsg(key = 'content', value = data['content'])
         self.__eventFactory.getEvent()# put event into event queue      
         
 

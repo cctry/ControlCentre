@@ -5,7 +5,6 @@ class Event(object):
     def __init__(self):
         self.__id = hash(str(time.time()))
         self.__timestamp = time.time()
-        self.__validity = True
         self.__msg = {}
     
     def getId(self):

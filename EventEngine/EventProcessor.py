@@ -4,7 +4,8 @@ from Event import *
 from libs import *
 class EventProcessor(object):
 
-    __objects = {'light':lightFunc, 'robot': None, 'AC': None}
+    __appObj = {'light': lightFunc, 'robot': None, 'AC': None, 'monitor': monitorFunc}
+    __queryObj = {'weather': weatherFunc, 'time': timeFunc, 'activity': actFunc}
 
     def __init__(self, queue, responseFactory):
         self.__eventQueue = queue
@@ -28,8 +29,12 @@ class EventProcessor(object):
             self.__callback(handler)           
 
     def classify(self, event):
+        domain = event.getMsg('domain')
         obj = event.getMsg('object')
-        func = self.__objects[obj]
+        if domain == "app":
+            func = self.__appObj[obj]
+        if domain == "query":
+            func = self.__queryObj[obj]
         return func(event)
 
     def lightFunc(self, event):
@@ -41,5 +46,7 @@ class EventProcessor(object):
             return handler
         else:# schedule the timeing task
             pass
+
+    def weatherFunc(self, event)
         
             

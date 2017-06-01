@@ -11,7 +11,7 @@ def save(position, Ob):
 	f.close()
 
 noun = {
-	"quiry" : ["天气", "时间", "活动"],
+	"query" : ["天气", "时间", "活动"],
 	"app" : ["空调", "扫地机器人", "显示器", "插座", "日程表", "通知"]
 }
 save(MainPo+'noun.ob', noun)
