@@ -55,10 +55,10 @@ class Light(object):
 		for i in xrange(1,10):
 			GPIO.output(pin,GPIO.HIGH)
 			print("light up")
-			time.sleep(self.up_time)
+			#time.sleep(self.up_time)
 			GPIO.output(pin,GPIO.LOW)
 			print("light down")
-			time.sleep(self.down_time)
+			#time.sleep(self.down_time)
 
 
 ####  恢复GPIO口状态
