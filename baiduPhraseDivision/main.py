@@ -65,7 +65,7 @@ while OUTSIDE.active :
 
 #object deside
 
-#opration deside
+#operation deside
 
 #parameter deside
 
@@ -76,7 +76,7 @@ while OUTSIDE.active :
 		"domain" : DOMAIN
 		"object" : OBJECT
 		"content" : {
-			"opration" : OPERATION
+			"operation" : OPERATION
 			"parameter" : PARAMETER
 			"startTime" : STARTTIME
 			"endTime" : ENDTIME 
@@ -90,7 +90,7 @@ res = {
 	"domain" : "app"
 	"object" : "显示器"
 	"content" : {
-		"opration" : "setPara"
+		"operation" : "setPara"
 		"parameter" : "显示器测试"
 		"startTime" : "0:15:30"
 		"endTime" : "0:16:30"
@@ -98,7 +98,7 @@ res = {
 }
 
 res = {
-	"domain" : "quiry"
+	"domain" : "query"
 	"object" : "天气"
 	"content" : {
 		"startTime" : "1:00:00"
