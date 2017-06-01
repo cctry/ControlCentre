@@ -50,5 +50,6 @@ def recognize(filePath, format, rate):
         return -1
     else:
         result = resDict['result']# it is a list of unicode objects
-        return map(lambda x: x.encode('gbk'), result)# encode it with gb2132
+        return result
+        #return map(lambda x: x.encode('gbk'), result)# encode it with gb2132
 
