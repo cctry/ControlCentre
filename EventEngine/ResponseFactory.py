@@ -1,4 +1,4 @@
-from Response import *
+from Response import Response
 class ResponseFactory(object):
 
     def __init__(self, queue):

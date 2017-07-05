@@ -11,7 +11,7 @@ class EventFactory(object):
         if Dict is None:
             self.__event.addMsg(key, value)
         else:
-            for k, v in dict.items(): 
+            for k, v in Dict.items(): 
                 self.__event.addMsg(k, v)
     
     def getEvent(self):

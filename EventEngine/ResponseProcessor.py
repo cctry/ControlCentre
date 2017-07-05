@@ -1,4 +1,3 @@
-import Response
 from threading import Thread
 class ResponseProcessor(object):
 
@@ -11,6 +10,7 @@ class ResponseProcessor(object):
         # Start the processor
         self.__active = True
         # Start the thread
+        self.__thread.setDaemon(True)
         self.__thread.start()
         
     def __Run(self):

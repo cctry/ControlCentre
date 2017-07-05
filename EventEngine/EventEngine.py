@@ -13,17 +13,17 @@ class EventEngine(object):
         self.__responseFactory = ResponseFactory(self.__responseQueue)
         self.__responseProcessor = ResponseProcessor(self.__responseQueue)
         self.__eventProcessor = EventProcessor(self.__eventQueue)
-        self.__responseProcessor.Start(self.__eventCallback)
-        self.__eventProcessor.Start()
+        self.__responseProcessor.Start()
+        self.__eventProcessor.Start(self.__eventCallback)
 
     def __eventCallback(self, handler):
-        self.__self.__responseFactory.getResponse(handler)# put response into response queue
+        self.__responseFactory.getResponse(handler)# put response into response queue
     
     def setData(self, data):
         self.__eventFactory.prepareEvent()
         self.__eventFactory.addMsg(key = 'domain', value = data['domain'])
         self.__eventFactory.addMsg(key = 'object', value = data['object'])
-        self.__eventFactory.addMsg(key = 'content', value = data['content'])
+        self.__eventFactory.addMsg(Dict = data['content'])
         self.__eventFactory.getEvent()# put event into event queue      
         
 
