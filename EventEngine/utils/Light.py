@@ -12,7 +12,8 @@ def getPlace(place):
     return places.get(place)
 
 def on(place):
-    pass
+    f = open('test.txt','w+')
+    f.close()
 
 def off(place):
     pass

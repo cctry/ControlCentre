@@ -73,13 +73,13 @@ while OUTSIDE.active :
 
 
 	res = {
-		"domain" : DOMAIN
-		"object" : OBJECT
+		"domain" : DOMAIN,
+		"object" : OBJECT,
 		"content" : {
-			"operation" : OPERATION
-			"parameter" : PARAMETER
-			"startTime" : STARTTIME
-			"endTime" : ENDTIME 
+			"operation" : OPERATION,
+			"parameter" : PARAMETER,
+			"startTime" : STARTTIME,
+			"endTime" : ENDTIME
 		}
 	}
 
@@ -87,19 +87,19 @@ while OUTSIDE.active :
 
 
 res = {
-	"domain" : "app"
-	"object" : "显示器"
+	"domain" : "app",
+	"object" : "显示器",
 	"content" : {
-		"operation" : "setPara"
-		"parameter" : "显示器测试"
-		"startTime" : "0:15:30"
+		"operation" : "setPara",
+		"parameter" : "显示器测试",
+		"startTime" : "0:15:30",
 		"endTime" : "0:16:30"
 	}
 }
 
 res = {
-	"domain" : "query"
-	"object" : "天气"
+	"domain" : "query",
+	"object" : "天气",
 	"content" : {
 		"position" : "1:00:00"
 	}
