@@ -35,8 +35,12 @@ class EventProcessor(object):
     def weatherFunc(self, event):
         position = event.getMsg('position')
 
+    def registerFunc(self, event):
+        #need to get the information of wifi TODO
+        SmartConfig.register(getSSID(), getKey())
+
     __appObj = {'light': lightFunc, 'robot': None, 'AC': None, 'monitor': None}
-    __queryObj = {'weather': weatherFunc, 'time': None, 'activity': None}
+    __queryObj = {'weather': weatherFunc, 'time': None, 'activity': None, 'register': registerFunc}
         
     def classify(self, event):
         domain = event.getMsg('domain')
