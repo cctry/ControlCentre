@@ -4,7 +4,7 @@ import urllib2
 import urllib
 import base64
 
-def synthesize(text): # text must be encoded by utf-8
+def synthesize(text): # text must be encoded by utf-8 e.x. ChineseStr.decode('gbk).encode('utf8)
     url = 'http://tsn.baidu.com/text2audio'
     #get accessToken
     token = OAuth.getAccessToken()
