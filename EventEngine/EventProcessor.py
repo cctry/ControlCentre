@@ -37,7 +37,8 @@ class EventProcessor(object):
 
     def registerFunc(self, event):
         #need to get the information of wifi TODO
-        SmartConfig.register(getSSID(), getKey())
+        #SmartConfig.register(getSSID(), getKey())
+        pass
 
     __appObj = {'light': lightFunc, 'robot': None, 'AC': None, 'monitor': None}
     __queryObj = {'weather': weatherFunc, 'time': None, 'activity': None, 'register': registerFunc}
