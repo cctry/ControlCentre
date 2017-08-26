@@ -5,6 +5,10 @@ import urllib
 import base64
 
 def synthesize(text): # text must be encoded by utf-8 e.x. ChineseStr.decode('gbk).encode('utf8)
+    """
+    :type: str
+    :rtype: binary data
+    """
     url = 'http://tsn.baidu.com/text2audio'
     #get accessToken
     token = OAuth.getAccessToken()

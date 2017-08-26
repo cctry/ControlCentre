@@ -50,7 +50,7 @@ while OUTSIDE.active :
 			words = words.split(k)[1]
 			break
 
-	for k in timeExp["具体时间"]
+	for k in timeExp["具体时间"]:
 		m = re.match(k, words)
 		if m.group() :
 			timemode = 1

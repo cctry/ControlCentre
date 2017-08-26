@@ -1,1 +1,1 @@
-__all__ = ['Light', 'ScheduleManager', 'SmartConfig']
+__all__ = ['Light', 'ScheduleManager', 'SmartConfig', 'weather']
