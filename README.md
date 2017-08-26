@@ -12,7 +12,6 @@
   语音日程表
 
  # Necessary libraries
- 1. urllib
- 2. urllib2
- 3. apscheduler
+ 1. requests
+ 2. apscheduler
 
