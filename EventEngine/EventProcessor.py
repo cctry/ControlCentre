@@ -33,7 +33,9 @@ class EventProcessor(object):
         return handler
 
     def weatherFunc(self, event):
-        position = event.getMsg('position')
+        time = event.getMsg('time')
+        handler = weather.getOperate(time)
+        return handler
 
     def registerFunc(self, event):
         #need to get the information of wifi TODO
